@@ -1,0 +1,132 @@
+SAÍDA DAS CONSULTAS - Questão 2 (UPA Monitor)
+Dados OFICIAIS do painel em 28/10/2026 às 19:25 - gerado rodando upa_monitor_q2.sql no PostgreSQL 16
+======================================================================
+               upa                |      data_hora      | emergencia | muito_urgente | urgente | pouco_urgente | nao_urgente | total_aguardando | casos_criticos | aguardando_triagem | pct_baixa_gravidade | tempo_classificacao_min | tempo_consultorio_min | confere_total 
+----------------------------------+---------------------+------------+---------------+---------+---------------+-------------+------------------+----------------+--------------------+---------------------+-------------------------+-----------------------+---------------
+ UPA Sul                          | 2026-10-28 19:25:00 |          0 |             0 |       3 |            23 |           0 |               26 |              0 |                  1 |                88.5 |                         |                       | OK
+ Ana Adelaide                     | 2026-10-28 19:25:00 |          0 |             0 |       2 |             8 |           2 |               12 |              0 |                  6 |                83.3 |                         |                       | OK
+ UPA Leste                        | 2026-10-28 19:25:00 |          0 |             0 |       1 |             5 |           0 |                6 |              0 |                  1 |                83.3 |                         |                       | OK
+ UPA José Adelino da Silva        | 2026-10-28 19:25:00 |          0 |             0 |       0 |             4 |           0 |                4 |              0 |                  0 |               100.0 |                         |                       | OK
+ Jaci Paraná                      | 2026-10-28 19:25:00 |          0 |             0 |       0 |             0 |           0 |                0 |              0 |                  0 |                     |                         |                       | OK
+ UPA Leste Extensão - Odontologia | 2026-10-28 19:25:00 |          0 |             0 |       0 |             0 |           0 |                0 |              0 |                  0 |                     |                         |                       | OK
+ TOTAL GERAL                      | 2026-10-28 19:25:00 |          0 |             0 |       6 |            40 |           2 |               48 |              0 |                  8 |                87.5 |                         |                       | OK
+(7 rows)
+
+               upa                |         setor          | quantidade | pct_no_setor | posicao_no_setor 
+----------------------------------+------------------------+------------+--------------+------------------
+ UPA Leste                        | Assistência social     |          5 |        100.0 |                1
+ Ana Adelaide                     | Assistência social     |          0 |          0.0 |                2
+ Jaci Paraná                      | Assistência social     |          0 |          0.0 |                3
+ UPA José Adelino da Silva        | Assistência social     |          0 |          0.0 |                4
+ UPA Leste Extensão - Odontologia | Assistência social     |          0 |          0.0 |                5
+ UPA Sul                          | Assistência social     |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Assistência social     |          5 |              |                 
+ UPA Leste                        | Atendidos consultório  |        224 |         26.3 |                1
+ UPA Sul                          | Atendidos consultório  |        212 |         24.9 |                2
+ Ana Adelaide                     | Atendidos consultório  |        196 |         23.0 |                3
+ UPA José Adelino da Silva        | Atendidos consultório  |        180 |         21.1 |                4
+ Jaci Paraná                      | Atendidos consultório  |         41 |          4.8 |                5
+ UPA Leste Extensão - Odontologia | Atendidos consultório  |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Atendidos consultório  |        853 |              |                 
+ Ana Adelaide                     | Atendimento pediátrico |         50 |         25.9 |                1
+ UPA Leste                        | Atendimento pediátrico |         49 |         25.4 |                2
+ UPA Sul                          | Atendimento pediátrico |         43 |         22.3 |                3
+ UPA José Adelino da Silva        | Atendimento pediátrico |         40 |         20.7 |                4
+ Jaci Paraná                      | Atendimento pediátrico |         11 |          5.7 |                5
+ UPA Leste Extensão - Odontologia | Atendimento pediátrico |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Atendimento pediátrico |        193 |              |                 
+ UPA Sul                          | Exames laboratório     |        303 |         39.8 |                1
+ Ana Adelaide                     | Exames laboratório     |        209 |         27.4 |                2
+ UPA Leste                        | Exames laboratório     |        137 |         18.0 |                3
+ UPA José Adelino da Silva        | Exames laboratório     |         92 |         12.1 |                4
+ Jaci Paraná                      | Exames laboratório     |         21 |          2.8 |                5
+ UPA Leste Extensão - Odontologia | Exames laboratório     |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Exames laboratório     |        762 |              |                 
+ UPA Sul                          | Exames radiologia      |         98 |         33.2 |                1
+ UPA Leste                        | Exames radiologia      |         76 |         25.8 |                2
+ Ana Adelaide                     | Exames radiologia      |         66 |         22.4 |                3
+ UPA José Adelino da Silva        | Exames radiologia      |         44 |         14.9 |                4
+ Jaci Paraná                      | Exames radiologia      |         11 |          3.7 |                5
+ UPA Leste Extensão - Odontologia | Exames radiologia      |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Exames radiologia      |        295 |              |                 
+ UPA Leste                        | Medicação administrada |        403 |         27.2 |                1
+ Ana Adelaide                     | Medicação administrada |        371 |         25.0 |                2
+ UPA Sul                          | Medicação administrada |        332 |         22.4 |                3
+ UPA José Adelino da Silva        | Medicação administrada |        313 |         21.1 |                4
+ Jaci Paraná                      | Medicação administrada |         65 |          4.4 |                5
+ UPA Leste Extensão - Odontologia | Medicação administrada |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Medicação administrada |       1484 |              |                 
+ Ana Adelaide                     | Observação feminina    |         31 |         54.4 |                1
+ UPA Sul                          | Observação feminina    |         17 |         29.8 |                2
+ Jaci Paraná                      | Observação feminina    |          7 |         12.3 |                3
+ UPA Leste                        | Observação feminina    |          2 |          3.5 |                4
+ UPA José Adelino da Silva        | Observação feminina    |          0 |          0.0 |                5
+ UPA Leste Extensão - Odontologia | Observação feminina    |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Observação feminina    |         57 |              |                 
+ Ana Adelaide                     | Observação infantil    |          5 |         45.5 |                1
+ UPA Sul                          | Observação infantil    |          5 |         45.5 |                2
+ Jaci Paraná                      | Observação infantil    |          1 |          9.1 |                3
+ UPA José Adelino da Silva        | Observação infantil    |          0 |          0.0 |                4
+ UPA Leste                        | Observação infantil    |          0 |          0.0 |                5
+ UPA Leste Extensão - Odontologia | Observação infantil    |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Observação infantil    |         11 |              |                 
+ Ana Adelaide                     | Observação masculina   |         34 |         56.7 |                1
+ UPA Sul                          | Observação masculina   |         14 |         23.3 |                2
+ UPA Leste                        | Observação masculina   |          8 |         13.3 |                3
+ Jaci Paraná                      | Observação masculina   |          4 |          6.7 |                4
+ UPA José Adelino da Silva        | Observação masculina   |          0 |          0.0 |                5
+ UPA Leste Extensão - Odontologia | Observação masculina   |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Observação masculina   |         60 |              |                 
+ UPA Sul                          | Odontologia            |         15 |         62.5 |                1
+ UPA Leste Extensão - Odontologia | Odontologia            |          8 |         33.3 |                2
+ UPA Leste                        | Odontologia            |          1 |          4.2 |                3
+ Ana Adelaide                     | Odontologia            |          0 |          0.0 |                4
+ Jaci Paraná                      | Odontologia            |          0 |          0.0 |                5
+ UPA José Adelino da Silva        | Odontologia            |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Odontologia            |         24 |              |                 
+ UPA Sul                          | Pacientes triados      |        285 |         28.1 |                1
+ UPA Leste                        | Pacientes triados      |        265 |         26.2 |                2
+ Ana Adelaide                     | Pacientes triados      |        221 |         21.8 |                3
+ UPA José Adelino da Silva        | Pacientes triados      |        195 |         19.2 |                4
+ Jaci Paraná                      | Pacientes triados      |         47 |          4.6 |                5
+ UPA Leste Extensão - Odontologia | Pacientes triados      |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Pacientes triados      |       1013 |              |                 
+ UPA José Adelino da Silva        | Sala vermelha          |          7 |         41.2 |                1
+ UPA Leste                        | Sala vermelha          |          4 |         23.5 |                2
+ UPA Sul                          | Sala vermelha          |          4 |         23.5 |                3
+ Ana Adelaide                     | Sala vermelha          |          2 |         11.8 |                4
+ Jaci Paraná                      | Sala vermelha          |          0 |          0.0 |                5
+ UPA Leste Extensão - Odontologia | Sala vermelha          |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Sala vermelha          |         17 |              |                 
+ UPA Sul                          | Sutura                 |         38 |         43.7 |                1
+ UPA Leste                        | Sutura                 |         32 |         36.8 |                2
+ Ana Adelaide                     | Sutura                 |         15 |         17.2 |                3
+ Jaci Paraná                      | Sutura                 |          1 |          1.1 |                4
+ UPA José Adelino da Silva        | Sutura                 |          1 |          1.1 |                5
+ UPA Leste Extensão - Odontologia | Sutura                 |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Sutura                 |         87 |              |                 
+ UPA Sul                          | Transferências         |         20 |         50.0 |                1
+ UPA Leste                        | Transferências         |         17 |         42.5 |                2
+ Ana Adelaide                     | Transferências         |          1 |          2.5 |                3
+ Jaci Paraná                      | Transferências         |          1 |          2.5 |                4
+ UPA José Adelino da Silva        | Transferências         |          1 |          2.5 |                5
+ UPA Leste Extensão - Odontologia | Transferências         |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Transferências         |         40 |              |                 
+(98 rows)
+
+               upa                |       setor        | quantidade | pct_no_setor | posicao_no_setor 
+----------------------------------+--------------------+------------+--------------+------------------
+ UPA Sul                          | Exames laboratório |        303 |         39.8 |                1
+ Ana Adelaide                     | Exames laboratório |        209 |         27.4 |                2
+ UPA Leste                        | Exames laboratório |        137 |         18.0 |                3
+ UPA José Adelino da Silva        | Exames laboratório |         92 |         12.1 |                4
+ Jaci Paraná                      | Exames laboratório |         21 |          2.8 |                5
+ UPA Leste Extensão - Odontologia | Exames laboratório |          0 |          0.0 |                6
+ TODAS AS UPAs                    | Exames laboratório |        762 |              |                 
+(7 rows)
+
+ soma_de_todos_os_setores 
+--------------------------
+                     4909
+(1 row)
+
