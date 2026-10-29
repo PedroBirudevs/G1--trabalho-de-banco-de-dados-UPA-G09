@@ -1,0 +1,73 @@
+erDiagram
+    %% ============================================================
+    %% DER - UPA Monitor de Porto Velho
+    %% Fonte: painel público UPA Monitor (uptime.portovelho.ro.gov.br)
+    %% O painel mostra só números agregados do momento atual, sem dados
+    %% individuais de pacientes. Por isso o modelo guarda COLETAS, que são
+    %% retratos do painel de cada UPA em cada momento.
+    %% ============================================================
+
+    %% Não identificador (..): COLETA tem PK própria (id_coleta).
+    UPA ||..o{ COLETA : registra
+
+    %% Autorrelacionamento: a "UPA Leste Extensão - Odontologia" pertence à UPA Leste.
+    %% Uma extensão tem zero ou uma UPA principal; uma UPA tem zero ou mais extensões.
+    UPA |o..o{ UPA : possui_extensao
+
+    %% Identificador (--): a PK das contagens inclui id_coleta.
+    %% CONTAGEM_SETOR e CONTAGEM_RISCO resolvem os N:N
+    %% COLETA x SETOR e COLETA x CLASSIFICACAO_RISCO.
+    COLETA ||--o{ CONTAGEM_SETOR : contem
+    SETOR ||--o{ CONTAGEM_SETOR : aparece_em
+    COLETA ||--o{ CONTAGEM_RISCO : contem
+    CLASSIFICACAO_RISCO ||--o{ CONTAGEM_RISCO : aparece_em
+
+    UPA {
+        int id_upa PK
+        string nome UK
+        string tipo "PRINCIPAL ou EXTENSAO"
+        int id_upa_principal FK "nulo se for principal"
+        int ativa "booleano no SQL"
+    }
+
+    %% Os 15 itens de "Pacientes por setor". Ficam numa tabela (e não em
+    %% colunas) para que um setor novo seja só uma linha a mais (1FN).
+    SETOR {
+        int id_setor PK
+        string nome UK
+        string icone
+        string cor
+    }
+
+    %% Os 5 níveis da triagem: vermelho, laranja, amarelo, verde e azul.
+    CLASSIFICACAO_RISCO {
+        int id_classificacao PK
+        string nome UK
+        string cor
+        int ordem_prioridade UK "1 = Emergência"
+    }
+
+    %% total_aguardando repete a soma das cores de CONTAGEM_RISCO. Fica
+    %% guardado porque é o número exibido no card, mas a Q2 confere se bate.
+    %% Os tempos médios podem ser nulos quando o painel não os mostra.
+    COLETA {
+        int id_coleta PK
+        int id_upa FK
+        date data_hora "TIMESTAMP no SQL"
+        int total_aguardando
+        int tempo_medio_classificacao_seg
+        int tempo_medio_consultorio_seg
+        int online "booleano no SQL"
+    }
+
+    CONTAGEM_SETOR {
+        int id_coleta PK, FK
+        int id_setor PK, FK
+        int total_pacientes
+    }
+
+    CONTAGEM_RISCO {
+        int id_coleta PK, FK
+        int id_classificacao PK, FK
+        int total_aguardando
+    }
